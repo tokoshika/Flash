@@ -1,0 +1,134 @@
+body {
+  padding: 2rem;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #4e4e4e;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.green {
+  background-color: #084c61;
+}
+
+.red {
+  background-color: #db4d52;
+}
+
+.yellow {
+  background-color: #f9cf3b;
+}
+
+.blue {
+  background-color: #49b0e4;
+}
+
+.purple {
+  background-color: #996ce2;
+}
+
+/* Custom */
+
+.button-white {
+  background-color: white;
+}
+
+.button-white.button-clear {
+  color: #000000;
+  opacity: 0.2;
+}
+
+.button-large {
+  font-size: 1.4rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  padding: 0 2rem;
+}
+
+.button-left {
+  float: left;
+}
+
+.button-right {
+  float: right;
+}
+
+ul.unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  transition: transform 0.5s;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+  height: 500px;
+  padding: 4rem;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.pretext {
+  color: #000000;
+  opacity: 0.2;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-grid-thirds .col {
+  width: 32%;
+}
+
+.card-text h2 {
+  color: #000000;
+  opacity: 0.5;
+  font-size: 5rem;
+}
+
+.flip-enter-active {
+  transition: all 0.4s ease;
+}
+
+.flip-enter {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.flip-leave {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .flex-grid-thirds {
+    display: block;
+  }
+  .flex-grid-thirds .col {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+}

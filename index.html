@@ -1,0 +1,77 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="milligram.css" />
+    <link rel="stylesheet" href="app.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
+    <title>フラッシュカードアプリ</title>
+  </head>
+
+  <body>
+    <div class="container text-center">
+      <h1>フラッシュカード!</h1>
+    </div>
+    <div id="flashCardApp" class="container center">
+      <div v-bind:class="showedCard.colorClass" class="card card-front col">
+        <transition name="flip">
+          <div
+            v-show="!showedCard.flipped"
+            @click="flipCard"
+            class="card-text card-front-text"
+          >
+            <div class="pretext">単語</div>
+            <h2>{{showedCard.frontText}}</h2>
+
+            <button class="button-white button-clear button-large">
+              フリップ
+              <i class="fas fa-sync-alt"></i>
+            </button>
+          </div>
+        </transition>
+
+        <transition name="flip">
+          <div
+            v-show="showedCard.flipped"
+            @click="flipCard"
+            class="card-text card-back-text"
+          >
+            <div class="pretext">意味</div>
+            <h2>{{showedCard.backText}}</h2>
+
+            <button class="button-white button-clear button-large">
+              フリップ
+              <i class="fas fa-sync-alt"></i>
+            </button>
+          </div>
+        </transition>
+      </div>
+      <div>
+        <button v-on:click="previosCard" class="button-left">前</button>
+        <button v-on:click="nextCard" class="button-right">次</button
+        ><br /><br />
+      </div>
+    </div>
+    <p class="text-center">
+      「次」と「前」と「フリップ」のコマンドを言ってください。
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="app.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  </body>
+</html>
