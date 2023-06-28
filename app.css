@@ -1,6 +1,7 @@
 body {
   padding: 2rem;
   font-family: "Lato", sans-serif;
+  background-color: rgb(228, 223, 223);
 }
 
 h1 {
@@ -101,7 +102,7 @@ ul.unstyled {
 
 .pretext {
   color: #000000;
-  opacity: 0.2;
+  opacity: 0.7;
 }
 
 .card:hover {
@@ -123,6 +124,9 @@ ul.unstyled {
   font-size: 5rem;
 }
 
+.pretext {
+  font-size: 2rem;
+}
 .flip-enter-active {
   transition: all 0.4s ease;
 }

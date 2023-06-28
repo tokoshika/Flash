@@ -114,14 +114,14 @@ cards = [
   {
     id: 16,
     frontText: "集合",
-    backText: `しゅう\nごう`,
+    backText: `しゅうごう`,
     colorClass: "yellow",
     flipped: false,
   },
   {
     id: 17,
     frontText: "乗車",
-    backText: `じょう\nしゃ`,
+    backText: `じょうしゃ`,
     colorClass: "yellow",
     flipped: false,
   },
