@@ -15,6 +15,7 @@ h1 {
 #flashCardApp {
   display: flex;
 }
+
 .container {
   max-width: 800px;
   margin: 0 auto;
