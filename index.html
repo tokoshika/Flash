@@ -24,9 +24,10 @@
 
   <body>
     <div class="container text-center">
-      <h1>フラッシュカード!</h1>
+      <h1>漢字検定</h1>
     </div>
     <div id="flashCardApp" class="container center">
+      <button v-on:click="previosCard" class="button-left">前</button>
       <div v-bind:class="showedCard.colorClass" class="card card-front col">
         <transition name="flip">
           <div
@@ -34,11 +35,11 @@
             @click="flipCard"
             class="card-text card-front-text"
           >
-            <div class="pretext">単語</div>
+            <div class="pretext">漢字</div>
             <h2>{{showedCard.frontText}}</h2>
 
             <button class="button-white button-clear button-large">
-              フリップ
+              答を見る
               <i class="fas fa-sync-alt"></i>
             </button>
           </div>
@@ -50,25 +51,21 @@
             @click="flipCard"
             class="card-text card-back-text"
           >
-            <div class="pretext">意味</div>
+            <div class="pretext">読み方</div>
             <h2>{{showedCard.backText}}</h2>
 
             <button class="button-white button-clear button-large">
-              フリップ
+              問題を見る
               <i class="fas fa-sync-alt"></i>
             </button>
           </div>
         </transition>
       </div>
-      <div>
-        <button v-on:click="previosCard" class="button-left">前</button>
-        <button v-on:click="nextCard" class="button-right">次</button
-        ><br /><br />
-      </div>
+      <button v-on:click="nextCard" class="button-right">次</button>
     </div>
-    <p class="text-center">
+    <!-- <p class="text-center">
       「次」と「前」と「フリップ」のコマンドを言ってください。
-    </p>
+    </p> -->
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="app.js"></script>
